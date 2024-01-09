@@ -24,7 +24,6 @@ a:hover {
 }
 
 body {
-
     margin: 0;
     padding: 0;
     display: flex;
@@ -33,21 +32,27 @@ body {
     width: 100vw;
     min-width: 320px;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 button {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
     font-family: inherit;
     background: #fff;
     font-weight: 400;
-    font-size: 15px;
-    border: 1px solid #fff;
+    font-size: 18px;
+    border: 2px solid var(--border-color);
     border-radius: 10px;
     color: #000;
     cursor: pointer;
     min-height: 30px;
-    min-width: 30px;
+    min-width: 50px;
     padding: 10px 10px;
     height: 40px;
+    transition: all ease-in-out 200ms;
 }
 
 button:hover {
@@ -58,3 +63,4 @@ button:hover {
     height: 100%;
     width: 100%;
 }
+

@@ -1,0 +1,161 @@
+#gameShell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 500px;
+    min-width: 200px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 50px;
+    animation-name: spin;
+    animation-duration: 1200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* transform: rotate(3deg); */
+    /* transform: rotate(0.3rad);/ */
+    /* transform: rotate(3grad); */
+    /* transform: rotate(.03turn);  */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#borderGrid {
+    border: 5px solid var(--border-color);
+    border-radius: 11px;
+    background: var(--border-color);
+}
+
+#navigation-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+#newGame-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#buttonShowModalInsertCellsBlock {
+    background: #efefef;
+}
+
+#wrongAnswersElem {
+
+    border: 2px solid var(--border-color);
+    border-radius: 999999px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+
+}
+
+#insertCells-block {
+    background: #fff;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, -110%);
+    position: absolute;
+    display: none;
+    gap: 5px;
+}
+
+table {
+    overflow: hidden;
+    border-radius: 12px;
+    border: 5px solid var(--border-color);
+    border-collapse: collapse;
+    margin: -5px;
+}
+
+tr, td {
+    max-height: 50px;
+    max-width: 50px;
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--border-color);
+}
+
+tr {
+    text-align: center;
+    background: #fff;
+    color: #111;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.gridRowBorder {
+    border-top: 5px solid var(--border-color);
+}
+
+.gridColBorder {
+    border-left: 5px solid var(--border-color);
+}
+
+.cellButton {
+    display: block;
+    text-align: center;
+    background: #efefef;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.selectCellButton {
+    background: #6f9091;
+}
+
+.selectCellButton:hover {
+    background: #6f9091;
+}
+
+.cellLTR {
+    border-radius: 6px 0 0 0;
+}
+
+.cellRTR {
+    border-radius: 0 6px 0 0;
+}
+
+.cellRBR {
+    border-radius: 0 0 6px 0;
+}
+
+.cellLBR {
+    border-radius: 0 0 0 6px;
+}
+
+#insertNumberButtons-block {
+    display: flex;
+    gap: 5px;
+}
+
+#insertNumberButtons-block > button {
+}

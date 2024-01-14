@@ -1,4 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
+    --border-color: #4e3554;
     font-family: "Maiandra GD", Rockwell, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 0;
     font-weight: 400;
@@ -24,6 +29,8 @@ a:hover {
 }
 
 body {
+    box-sizing: border-box;
+    border: 0;
     margin: 0;
     padding: 0;
     display: flex;
@@ -60,6 +67,8 @@ button:hover {
 }
 
 #app {
+    margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
 }

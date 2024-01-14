@@ -1,27 +1,31 @@
-#gameShell {
+#innerGameShell {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    min-height: 500px;
-    min-width: 200px;
+    min-height: 300px;
+    min-width: 300px;
+}
+
+#outerGameShell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0,
     'wght' 200,
-    'GRAD' 0,
-    'opsz' 24;
+    'GRAD' 200,
+    'opsz' 100;
     font-size: 50px;
     animation-name: spin;
     animation-duration: 1200ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    /* transform: rotate(3deg); */
-    /* transform: rotate(0.3rad);/ */
-    /* transform: rotate(3grad); */
-    /* transform: rotate(.03turn);  */
 }
 
 @keyframes spin {
@@ -33,18 +37,13 @@
     }
 }
 
-#borderGrid {
-    border: 5px solid var(--border-color);
-    border-radius: 11px;
-    background: var(--border-color);
-}
 
 #navigation-block {
-    width: 100%;
+    width: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5px;
+    gap: 60px;
 }
 
 #newGame-block {
@@ -83,7 +82,18 @@
     gap: 5px;
 }
 
+#borderGrid {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    border: 5px solid var(--border-color);
+    border-radius: 11px;
+    background: var(--border-color);
+}
+
 table {
+    max-width: 100vw;
+    max-height: 100vh;
     overflow: hidden;
     border-radius: 12px;
     border: 5px solid var(--border-color);
@@ -92,11 +102,17 @@ table {
 }
 
 tr, td {
-    max-height: 50px;
-    max-width: 50px;
-    height: 50px;
-    width: 50px;
     border: 2px solid var(--border-color);
+}
+
+tr {
+}
+
+td {
+    min-height: 30px;
+    min-width: 30px;
+    height: 55px;
+    width: 55px;
 }
 
 tr {
@@ -121,6 +137,10 @@ tr {
     background: #efefef;
     height: 100%;
     width: 100%;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 100%;
+    max-height: 100%;
     margin: 0;
     padding: 0;
     border-radius: 0;
@@ -154,6 +174,7 @@ tr {
 
 #insertNumberButtons-block {
     display: flex;
+    flex-flow: wrap row;
     gap: 5px;
 }
 

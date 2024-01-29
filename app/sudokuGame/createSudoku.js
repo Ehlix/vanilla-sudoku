@@ -2,7 +2,7 @@ export const sudokuLib = {
   6: {
     blockRows: 2,
     blockCols: 3,
-    emptySlots: 20, //1-20(24)
+    emptySlots: 24, //1-23(25)
     emptyGrid: [
       [0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0],
@@ -13,12 +13,12 @@ export const sudokuLib = {
     ],
     charsPool: [1, 2, 3, 4, 5, 6],
     allRowBorders: [2, 4, 6],
-    allColBorders: [2, 4, 6],
+    allColBorders: [3, 6],
   },
   8: {
     blockRows: 2,
     blockCols: 4,
-    emptySlots: 30, //1-30(34)
+    emptySlots: 37, //1-36(38)
     emptyGrid: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -36,7 +36,7 @@ export const sudokuLib = {
   9: {
     blockRows: 3,
     blockCols: 3,
-    emptySlots: 40, //1-44(47)
+    emptySlots: 44, //1-44(47)
     emptyGrid: [
       [0, 0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -55,7 +55,7 @@ export const sudokuLib = {
   10: {
     blockRows: 2,
     blockCols: 5,
-    emptySlots: 45, //1-45(49)
+    emptySlots: 49, //1-50(52)
     emptyGrid: [
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -72,28 +72,28 @@ export const sudokuLib = {
     allRowBorders: [2, 4, 6, 8, 10],
     allColBorders: [5, 10],
   },
-  12: {
-    blockRows: 3,
-    blockCols: 4,
-    emptySlots: 66, //1-66(68)
-    emptyGrid: [
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    ],
-    charsPool: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    allRowBorders: [3, 6, 9, 12],
-    allColBorders: [4, 8, 12],
-  },
+  // 12: {
+  //   blockRows: 3,
+  //   blockCols: 4,
+  //   emptySlots: 66, //1-66(68)
+  //   emptyGrid: [
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  //   ],
+  //   charsPool: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  //   allRowBorders: [3, 6, 9, 12],
+  //   allColBorders: [4, 8, 12],
+  // },
   // '14': {
   //   blockRows: 2,
   //   blockCols: 7,
@@ -111,7 +111,7 @@ export const sudokuLib = {
   // },
 };
 
-export var createSudoku = (cells = 9, emptySlots) => {
+export const createSudoku = (cells, emptySlots) => {
   const generateSudokuGrid = () => {
     const fillSudokuGrid = (grid) => {
       const allRowsFilled = grid.every((_, rowIndex) => {

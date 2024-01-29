@@ -3,14 +3,25 @@
 }
 
 :root {
-    --border-color: #4e3554;
+    --mc-1: #dbcbba; /*background*/
+    --mc-2: #4f4564; /*border*/
+    --mc-3: #272727; /*text*/
+    --mc-4: #c8c3d8; /*hover*/
+    --mc-5: #7e7fa0; /*selected*/
+    --mc-6: #eae0d9; /*button bg && dynamic cells*/
+    --mc-7: #d8d8d8; /*fixed cells*/
+    --erc-1: #fd9c9c;
+    --erc-2: #ff8a8a;
+    --erc-3: #f66d6d;
+    --shc-1: rgba(12, 13, 39, 0.7);
+    --shc-2: rgba(36, 31, 39, 0.66);
     font-family: "Maiandra GD", Rockwell, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 0;
     font-weight: 400;
     font-size: 18px;
     color-scheme: light dark;
-    color: #000;
-    background-color: #8e9b94;
+    color: var(--mc-3);
+    background-color: var(--mc-1);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -48,28 +59,26 @@ button {
     justify-items: center;
     align-items: center;
     font-family: inherit;
-    background: #fff;
+    background: var(--mc-6);
     font-weight: 400;
     font-size: 18px;
-    border: 2px solid var(--border-color);
+    color: var(--mc-3);
+    border: 2px solid var(--mc-2);
     border-radius: 10px;
-    color: #000;
     cursor: pointer;
+    height: 40px;
     min-height: 30px;
     min-width: 50px;
     padding: 10px 10px;
-    height: 40px;
     transition: all ease-in-out 200ms;
+    &:hover {
+        background: var(--mc-4);
+    }
 }
 
-button:hover {
-    background: #c9dad9;
-}
-
-#app {
+#root {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
 }
-

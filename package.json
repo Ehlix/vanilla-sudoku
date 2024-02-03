@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.17",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "vite-plugin-singlefile": "^1.0.0"
   }
 }

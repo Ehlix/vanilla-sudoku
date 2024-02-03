@@ -4,7 +4,7 @@ import { viteSingleFile } from 'vite-plugin-singlefile'
 export default {
     // ...
     build:{
-        outDir : "static"
+        outDir : "docs"
     },
     plugins:[
         viteSingleFile()

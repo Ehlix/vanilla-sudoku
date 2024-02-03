@@ -18,7 +18,7 @@ export const sudokuLib = {
   8: {
     blockRows: 2,
     blockCols: 4,
-    emptySlots: 37, //1-36(38)
+    emptySlots: 36, //1-36(38)
     emptyGrid: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -55,7 +55,7 @@ export const sudokuLib = {
   10: {
     blockRows: 2,
     blockCols: 5,
-    emptySlots: 49, //1-50(52)
+    emptySlots: 48, //1-50(52)
     emptyGrid: [
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],

@@ -1,6 +1,8 @@
-#innerGameShell {
-    min-height: 50vh;
-    min-width: 95vw;
+#gameShell {
+    position: relative;
+    padding: 0;
+    min-height: 90vh;
+    min-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,55 +10,14 @@
     gap: 20px;
 }
 
-#outerGameShell {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.loading {
-    color: var(--mc-6);
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.material-symbols-outlined {
-    height: fit-content;
-    width: fit-content;
-    font-variation-settings:
-        "FILL" 0,
-        "wght" 200,
-        "GRAD" 200,
-        "opsz" 100;
-    color: var(--mc-6);
-    font-size: 50px;
-    animation-name: spin;
-    animation-duration: 1066ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#navigation-block {
+#gameNavigation-block {
+    min-width: 100%;
     position: relative;
     width: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 10px;
 }
 
 #newGame-block {
@@ -64,7 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 /* #showModalButton {
@@ -76,112 +37,141 @@
     border: 2px solid var(--mc-2);
     border-radius: 10px;
     left: 50%;
-    transform: translate(-50%, -110%);
+    transform: translate(-50%, -100%);
     position: absolute;
     display: none;
-    gap: 5px;
+    gap: 10px;
 }
 
-#wrongAnswersElem {
-    border: 2px solid var(--mc-2);
-    border-radius: 999999px;
-    background: var(--mc-6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 35px;
-    width: 35px;
-}
-
-#borderGrid {
-    max-width: 100vw;
-    max-height: 100vh;
+#borderGrid3 {
+    min-width: fit-content;
+    min-height: fit-content;
     overflow: hidden;
     border: 5px solid var(--mc-6);
-    border-radius: 28px;
+    border-radius: 22px;
     background: var(--mc-6);
 }
-
-#border2grid {
+#borderGrid2 {
     position: relative;
-    max-width: 100vw;
-    max-height: 100vh;
-    overflow: hidden;
-    border-radius: 30px;
+    min-width: fit-content;
+    min-height: fit-content;
     overflow: hidden;
     border: 10px solid var(--mc-2);
-    border-radius: 24px;
+    border-radius: 18px;
+    background: var(--mc-2);
+}
+
+#borderGrid1 {
+    /* position: relative; */
+    min-height: inherit;
+    min-width: inherit;
+    overflow: hidden;
+    border: 5px solid var(--mc-2);
+    border-radius: 13px;
     background: var(--mc-2);
 }
 
 #shadowGrid {
-    display: block;
+    display: absolute;
     pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 11px;
     overflow: hidden;
     box-shadow: inset 0 0 12px 6px var(--shc-1);
     z-index: 500;
 }
 
-.gameOver {
-    /* pointer-events: none; */
-    position: absolute;
-    padding: 5px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 400;
+#insertNumbers-block {
+    min-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--shc-2);
+    flex-flow: wrap row;
+    gap: 5px;
+}
+
+.timer-element {
+    height: 40px;
+    width: 110px;
+    min-height: 30px;
+    min-width: 60px;
+    padding: 10px;
+    border: 2px solid var(--mc-6);
+    border-radius: 20px;
+    background: var(--mc-2);
     color: var(--mc-6);
-    backdrop-filter: blur(3px);
-    & span {
-        line-height: normal;
-        font-size: 40px;
-        font-weight: 400;
-        text-wrap: wrap;
-        text-align: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrongAnswers-element {
+    height: 40px;
+    width: 110px;
+    min-height: 30px;
+    min-width: 50px;
+    padding: 10px;
+    border: 2px solid var(--mc-6);
+    border-radius: 20px;
+    background: var(--mc-2);
+    color: var(--mc-6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 table {
     position: relative;
-    max-width: 100vw;
-    max-height: 100vh;
+    min-height: 100%;
+    min-width: 100%;
     overflow: hidden;
-    border: 5px solid var(--mc-2);
-    border-radius: 16px;
     border-collapse: collapse;
-    /* margin: -0px; */
     overflow: hidden;
 }
 
-tr,
 td {
-    border: 2px solid var(--mc-2);
-}
-
-td {
-    min-height: 30px;
-    min-width: 30px;
+    background: var(--mc-7);
     height: 55px;
     width: 55px;
+    padding: 0px;
+    border: 2px solid var(--mc-2);
+    overflow: hidden;
 }
 
 tr {
     text-align: center;
-    background: var(--mc-7);
-    color: var(--mc-3);
+    /* background: var(--shc-3); */
     font-weight: 900;
     font-size: 18px;
+}
+/* tr:first-child > td:first-child {
+    border-radius: 8px 0 0 0;
+}
+tr:first-child > td:last-child {
+    border-radius: 0 8px 0 0;
+}
+tr:last-child > td:last-child {
+    border-radius: 0 0 8px 0;
+}
+tr:last-child > td:first-child {
+    border-radius: 0 0 0 8px;
+} */
+
+tr > td {
+    border-top: none;
+}
+tr > td:first-child {
+    border-left: none;
+}
+tr > td {
+    border-right: none;
+}
+tr:last-child > td {
+    border-bottom: none;
 }
 
 .gridRowBorder {
@@ -193,13 +183,12 @@ tr {
 }
 
 .cellButton {
-    display: block;
     text-align: center;
     background: var(--mc-6);
     height: 100%;
     width: 100%;
-    min-width: 30px;
-    min-height: 30px;
+    min-width: 0;
+    min-height: 0;
     max-width: 100%;
     max-height: 100%;
     margin: 0;
@@ -219,8 +208,8 @@ tr {
     }
 }
 
-.cellTL {
-    border-radius: 10px 0 0 0;
+/* .cellTL {
+    border-radius: 6px 0 0 0;
 }
 
 .cellTR {
@@ -233,7 +222,7 @@ tr {
 
 .cellBL {
     border-radius: 0 0 0 10px;
-}
+} */
 
 .errorCellButton {
     background: var(--erc-1);
@@ -245,7 +234,65 @@ tr {
     }
 }
 
-.activeButton {
+.gameOver {
+    position: absolute;
+    border-radius: 10px;
+    padding: 5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--shc-2);
+    color: var(--goc-1);
+    backdrop-filter: blur(3px);
+    & span {
+        line-height: normal;
+        font-size: 40px;
+        font-weight: 400;
+        text-wrap: wrap;
+        text-align: center;
+    }
+}
+
+.loading {
+    color: var(--goc-1);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.material-symbols-outlined.hourglass_empty {
+    height: fit-content;
+    width: fit-content;
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 350,
+        "GRAD" 200,
+        "opsz" 100;
+    color: var(--goc-1);
+    font-size: 50px;
+    animation-name: spin;
+    animation-duration: 1066ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.active-button {
     animation: shb 300ms cubic-bezier(1, 0.92, 0.7, 1);
     & > span {
         animation: tsb 300ms cubic-bezier(1, 0.92, 0.7, 1);
@@ -254,13 +301,13 @@ tr {
 
 @keyframes shb {
     0% {
-        box-shadow: inset 0 0 0 0 var(--mc-2);
+        box-shadow: inset 0 0 0 0 var(--shc-1);
     }
     50% {
-        box-shadow: inset 2px 2px 6px -3px var(--mc-2);
+        box-shadow: inset 2px 2px 6px -3px var(--shc-1);
     }
     100% {
-        box-shadow: inset 0 0 0 0 var(--mc-2);
+        box-shadow: inset 0 0 0 0 var(--shc-1);
     }
 }
 
@@ -276,6 +323,108 @@ tr {
     }
 }
 
+@media (max-width: 632px) {
+    td {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 578px) {
+    td {
+        height: 10vw;
+        width: 10vw;
+    }
+    #borderGrid3 {
+        border-width: 1vw;
+        border-radius: 3vw;
+    }
+    #borderGrid2 {
+        border-width: 1.5vw;
+        border-radius: 2.9vw;
+    }
+    #borderGrid1 {
+        border-width: 1vw;
+        border-radius: 1vw;
+    }
+    #shadowGrid,
+    .gameOver {
+        border-radius: 2vw;
+    }
+    table {
+        border-width: 1vw;
+        border-radius: 1.6vw;
+    }
+    tr,
+    td {
+        border-width: 0.3vw;
+    }
+    .gridRowBorder {
+        border-top-width: 0.5vw;
+    }
+    .gridColBorder {
+        border-left-width: 0.5vw;
+    }
+    button {
+        border-width: 0.3vw;
+    }
+}
+
+@media (max-width: 490px) {
+    .timer-element {
+        height: 40px;
+        width: 90px;
+    }
+
+    .wrongAnswers-element {
+        height: 40px;
+        width: 90px;
+    }
+}
+
+@media (max-width: 420px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+    #gameShell {
+        gap: 10px;
+    }
+    .timer-element {
+        height: 40px;
+        width: 90px;
+    }
+    .wrongAnswers-element {
+        height: 40px;
+        width: 90px;
+    }
+    #selectCells-block {
+        transform: translate(-50%, -100%);
+        padding: 7px;
+        gap: 7px;
+    }
+    .newGame-button {
+        padding: 5px;
+    }
+    .showModalBlock-button {
+        padding: 5px;
+    }
+    #newGame-block {
+        gap: 5px;
+    }
+    .gridRowBorder {
+        border-top-width: 2px;
+    }
+    .gridColBorder {
+        border-left-width: 2px;
+    }
+}
+
+@media (max-width: 360px) {
+    #newGame-block {
+        gap: 5px;
+    }
+}
+
 /* .gameCompleted {
     display: flex;
     justify-content: center;
@@ -288,12 +437,6 @@ tr {
         text-align: center;
     }
 } */
-
-#insertNumberButtons-block {
-    display: flex;
-    flex-flow: wrap row;
-    gap: 5px;
-}
 
 /* #insertNumberButtons-block > button {
 } */

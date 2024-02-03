@@ -53,6 +53,7 @@
     --shc-1: rgba(12, 13, 39, 0.7);
     --shc-2: rgba(36, 31, 39, 0.66);
     --shc-3: rgb(46, 42, 54);
+    --shc-4: rgba(0, 0, 0, 0.2);
     &.dark {
         --mc-1: #2b2831;
         --mc-2: #dbcbba;
@@ -68,6 +69,7 @@
         --shc-1: rgba(12, 13, 39, 0.7);
         --shc-2: rgba(36, 31, 39, 0.66);
         --shc-3: rgb(119, 108, 104);
+        --shc-4: rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -115,6 +117,7 @@ button {
     min-width: 50px;
     padding: 10px 10px;
     transition: all ease-in-out 200ms;
+    box-shadow: inset -3px -3px 2px 0 var(--shc-4);
     &:hover {
         background: var(--mc-4);
     }

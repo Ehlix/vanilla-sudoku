@@ -137,7 +137,7 @@ export const renderSudokuElement = (element) => {
         e.preventDefault();
         if (!button.classList.contains('active-button')) {
           button.classList.add('active-button');
-          setTimeout(() => button.classList.remove('active-button'), 300);
+          setTimeout(() => button.classList.remove('active-button'), 400);
         }
         if (gameOverText || selectRow === null || selectCol === null) {
           return;
@@ -224,7 +224,7 @@ export const renderSudokuElement = (element) => {
   newGameButton.addEventListener('click', () => {
     if (!newGameButton.classList.contains('active-button')) {
       newGameButton.classList.add('active-button');
-      setTimeout(() => newGameButton.classList.remove('active-button'), 300);
+      setTimeout(() => newGameButton.classList.remove('active-button'), 400);
     }
     render();
   });
@@ -236,7 +236,7 @@ export const renderSudokuElement = (element) => {
       showModalBlockButton.classList.add('active-button');
       setTimeout(
         () => showModalBlockButton.classList.remove('active-button'),
-        300
+        400
       );
     }
     const displayStyle = selectCellsModalBlock.style;

@@ -118,6 +118,7 @@ button {
     padding: 10px 10px;
     transition: all ease-in-out 200ms;
     box-shadow: inset -3px -3px 2px 0 var(--shc-4);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
     &:hover {
         background: var(--mc-4);
     }

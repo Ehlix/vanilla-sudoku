@@ -63,8 +63,8 @@
 
 #borderGrid1 {
     /* position: relative; */
-    min-height: inherit;
-    min-width: inherit;
+    min-height: fit-content;
+    min-width: fit-content;
     overflow: hidden;
     border: 5px solid var(--mc-2);
     border-radius: 13px;
@@ -196,7 +196,7 @@ tr:last-child > td {
     border-radius: 0;
     border: none;
     cursor: pointer;
-    box-shadow:none;
+    box-shadow: none;
     &:hover {
         background: var(--mc-4);
     }
@@ -337,14 +337,20 @@ tr:last-child > td {
         width: 10vw;
     }
     #borderGrid3 {
+        min-width: 90vw;
+        min-height: 90vw;
         border-width: 1vw;
         border-radius: 3vw;
     }
     #borderGrid2 {
+        min-width: inherit;
+        min-height: inherit;
         border-width: 1.5vw;
         border-radius: 2.9vw;
     }
     #borderGrid1 {
+        min-width: inherit;
+        min-height: inherit;
         border-width: 1vw;
         border-radius: 1vw;
     }
@@ -353,6 +359,8 @@ tr:last-child > td {
         border-radius: 2vw;
     }
     table {
+        min-width: inherit;
+        min-height: inherit;
         border-width: 1vw;
         border-radius: 1.6vw;
     }
@@ -361,10 +369,10 @@ tr:last-child > td {
         border-width: 0.3vw;
     }
     .gridRowBorder {
-        border-top-width: 0.5vw;
+        border-top-width: 3px;
     }
     .gridColBorder {
-        border-left-width: 0.5vw;
+        border-left-width: 3px;
     }
     button {
         border-width: 0.3vw;
@@ -411,12 +419,6 @@ tr:last-child > td {
     }
     #newGame-block {
         gap: 5px;
-    }
-    .gridRowBorder {
-        border-top-width: 2px;
-    }
-    .gridColBorder {
-        border-left-width: 2px;
     }
 }
 
